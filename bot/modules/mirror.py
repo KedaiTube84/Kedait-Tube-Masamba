@@ -222,7 +222,7 @@ class MirrorListener:
             msg += f'\n\n<b>Req. By: </b>{self.tag}'
             buttons = ButtonMaker()
             link = short_url(link)
-            buttons.buildbutton("🗄 Drive Link 🗄", link)
+            buttons.buildbutton("Drive Link", link)
             LOGGER.info(f'Done Uploading {name}')
             if INDEX_URL is not None:
                 url_path = rutils.quote(f'{name}')
