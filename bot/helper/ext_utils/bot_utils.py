@@ -147,7 +147,7 @@ def get_readable_message():
                            f" | <b>Leechers:</b> {download.torrent_info().num_leechs}"
                 except:
                     pass
-                msg += f"\n<b>Engine: qBittorrent v4</b>\n<b>Peers:</b> {download.aria_download().connections}"
+                msg += f"\n<b>Engine:</b> {download.aria_download().connections}"
                 msg += f"\n<b>Adder:</b> {download.message.from_user.first_name} <code>({download.message.from_user.id})</code>"
                 msg += f"\n<b>Stop:</b> <code>/{BotCommands.CancelMirror} {download.gid()}</code>"				
             elif download.status() == MirrorStatus.STATUS_SEEDING:
