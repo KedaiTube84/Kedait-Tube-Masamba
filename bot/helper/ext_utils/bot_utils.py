@@ -139,9 +139,10 @@ def get_readable_message():
                 msg += f"\n<b>Speed:</b> {download.speed()} | <b>ETA:</b> {download.eta()}"
                 try:
                     msg += f"\n<b>Seeders:</b> {download.aria_download().num_seeders}" \
-                           f" | <b>Peers:</b> {download.aria_download().connections}"       
-               except:
-                    pass    
+                           f" | <b>Peers:</b> {download.aria_download().connections}"
+                except:
+                    pass
+                try:
                     msg += f"\n<b>Seeders:</b> {download.torrent_info().num_seeds}" \
                            f" | <b>Leechers:</b> {download.torrent_info().num_leechs}"
                 except:
