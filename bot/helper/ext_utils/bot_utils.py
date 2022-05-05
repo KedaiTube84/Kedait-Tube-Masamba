@@ -141,14 +141,14 @@ def get_readable_message():
                     msg += f"\n<b>Seeders:</b> {download.aria_download().num_seeders}" \
                            f" | <b>Peers:</b> {download.aria_download().connections}"
                 except:
+                    pass                
+                try:
+                    msg += f"\n<b>Engine: qBittorrent v4</b> {download.aria_download().connections}"
+                except:
                     pass
                 try:
                     msg += f"\n<b>Seeders:</b> {download.torrent_info().num_seeds}" \
                            f" | <b>Leechers:</b> {download.torrent_info().num_leechs}"
-                except:
-                    pass
-                try:
-                    msg += f"\n<b>Engine:</b> {download.aria_download().connections}"
                 except:
                     pass
                 msg += f"\n<b>Adder:</b> {download.message.from_user.first_name} <code>({download.message.from_user.id})</code>"
