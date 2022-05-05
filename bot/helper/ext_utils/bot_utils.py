@@ -140,10 +140,7 @@ def get_readable_message():
                 try:
                     msg += f"\n<b>Seeders:</b> {download.aria_download().num_seeders}" \
                            f" | <b>Peers:</b> {download.aria_download().connections}"
-                except:
-                    pass
-                try:
-                except:
+               except:
                     pass
                     msg += f"\n<b>Engine:</b> {download.aria_download().connections}"
                except:
